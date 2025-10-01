@@ -1,1 +1,10 @@
-
+{{ define "main" }}
+  <h2>قائمة المقالات</h2>
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
